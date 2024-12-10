@@ -1,0 +1,645 @@
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  /* box-sizing: border-box;
+  overflow-x: hidden; */
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #060019;
+  color: #fff;
+  /* background-size: cover;
+  background-position: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529; */
+}
+/* Шапка */
+.header {
+  width: 100%;
+  background-color: #130d25;
+}
+.header-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+/* Логотип и навигация вместе */
+.logo-navigation {
+  display: flex;
+  align-items: center;
+}
+/* Логотип */
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 50px; /* Отступ между логотипом и навбарами */
+}
+.logo a {
+  color: #b91c5d;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.logo a span {
+  color: #fff;
+  font-weight: bold;
+}
+/* Навигация */
+.navigation {
+  display: flex;
+  gap: 30px; /* Расстояние между ссылками */
+}
+.nav-mobile {
+  display: none;
+}
+.navigation a {
+  text-decoration: none;
+  color: #808792;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+/* При наведении на навбары */
+.navigation a:hover {
+  color: #1bb96b; /* Зеленый текст */
+}
+/* Зеленая линия при наведении */
+.navigation a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -23px; /* Расположение линии под текстом */
+  width: 0;
+  height: 2px; /* Толщина линии */
+  background-color: #1bb96b; /* Цвет линии */
+  transition: width 0.3s ease;
+}
+/* Анимация для линии */
+.navigation a:hover::after {
+  width: 100%; /* Линия становится видимой */
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  user-select: none;
+  padding: 0.5rem 0.75rem;
+  line-height: 1.25;
+  transition: all 0.15s ease-in-out;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.login {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+}
+.login:hover {
+  border: 1px solid #b91c5d;
+  color: #b91c5d;
+}
+.register {
+  padding: 10px 20px;
+  background-color: #1bb96b;
+  border: none;
+}
+.register:hover {
+  background-color: #35cb80;
+  color: #fff;
+}
+.header-right {
+  display: flex;
+  gap: 10px;
+}
+
+/* Блок 1 */
+.hero-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* height: 100vh; */
+  background: url('./assets/background.png') no-repeat center right;
+  /* background-position-y: -10px; */
+}
+.hero-content {
+  margin: 70px 0;
+}
+.hero-title {
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.hero-subtitle {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.hero-subtitle span {
+  color: #1bb96b;
+}
+.hero-btn {
+  border: none;
+  border-radius: 5px;
+  background-color: #b91c5d;
+  color: #fff;
+  padding: 15px 40px;
+  cursor: pointer;
+}
+.hero-btn:hover {
+  background-color: #a20c4b;
+}
+/* Блок 2 */
+.match-cards-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  color: #808792;
+  font-weight: 400;
+}
+.match-card {
+  width: 20%; /* Adjust based on the number of cards per row */
+  background-color: #130d25;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.ball-logo {
+  width: 20px;
+  height: 20px;
+}
+.league-name {
+  font-size: 14px;
+  margin-left: 5px;
+}
+.match-date {
+  font-size: 14px;
+  color: #666;
+}
+.teams {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.teams-left,
+.teams-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.team-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.team-name {
+  margin-top: 5px;
+  font-size: 14px;
+}
+.vs {
+  font-size: 20px;
+  margin: 0 10px;
+}
+.odds {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.odds-item {
+  width: 30%;
+  text-align: center;
+  background-color: #2a253a;
+  border-radius: 5px;
+  padding: 5px;
+}
+.odds-item span {
+  color: #fff;
+}
+/* Блок 3 */
+.cards-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+.card {
+  width: 50%;
+  height: 300px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card-background {
+  background-image: url('./assets/team2.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  border-radius: 10px;
+}
+.card-background2 {
+  background-image: url('./assets/team1.jpg');
+}
+.card-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  z-index: 0;
+}
+.card-content {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+.card-content h3,
+h4 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.price {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.old-price {
+  text-decoration: line-through;
+  font-size: 25px;
+  font-weight: bold;
+  color: #b5b5b5;
+  margin-left: 10px;
+}
+.new-price {
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bold;
+  color: #e6e600;
+}
+.btn-buy {
+  background-color: #0f9d58;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-buy:hover {
+  background-color: #0b8b4d;
+}
+/* Блок 4 */
+.full-width-card {
+  max-width: 1280px;
+  margin: 30px auto;
+  height: 400px;
+  background-image: url('./assets/team3.jpg');
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.full-width-card-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+}
+.full-width-card-content h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.full-width-card-content p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.full-width-card-content a {
+  color: #15ccff;
+  text-decoration: none;
+}
+.full-width-card-content a:hover {
+  color: #00a6d4;
+}
+.yellow-card {
+  max-width: 480px;
+  margin: 0 auto;
+  background: linear-gradient(107.99deg, #ffe51f -0.64%, #fac515 99.96%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+.left-yellow-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.left-yellow-card h2 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 400;
+}
+.right-yellow-card {
+  display: flex;
+  flex-direction: column;
+}
+.right-yellow-card h2 {
+  text-align: start;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  padding: 5px 0;
+}
+.right-yellow-card p {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  padding: 5px 0;
+}
+/* Блок 5 */
+.table-block {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.table-block h2 {
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.styled-table {
+  width: 100%;
+  color: #000;
+  border-collapse: collapse;
+  background-color: #f8f9fa;
+  text-align: left;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.styled-table thead tr {
+  background-color: #343a40;
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+}
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+.styled-table td img {
+  width: 30px;
+}
+.styled-table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+.styled-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #343a40;
+}
+/* Блок 6 */
+.block-with-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1280px;
+  margin: 20px auto;
+}
+.block-with-card {
+  position: relative;
+  width: 23%; /* Четыре карточки равномерно */
+  padding-top: 25%; /* Соотношение сторон 16:9 */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.block-card-content {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.block-card-content h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.block-card-content p {
+  font-size: 14px;
+  margin: 5px 0 0;
+}
+.guarantee {
+  text-align: center;
+  color: #fff;
+  font-size: 40px;
+  margin: 30px 0;
+}
+/* Footer*/
+.footer {
+  width: 100%;
+  background-color: #130d25;
+}
+.footer-block {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.footer-cards {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 0;
+}
+.footer-menu {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.footer-menu a {
+  color: #fff;
+  text-decoration: none;
+  color: #808792;
+  font-size: 1rem;
+}
+/* При наведении */
+.footer-menu a:hover {
+  color: #1bb96b; /* Зеленый текст */
+}
+.footer-text p {
+  font-size: 1rem;
+  padding-bottom: 20px;
+}
+.footer-text p a {
+  color: #15ccff;
+  text-decoration: none;
+}
+.footer-text p a:hover {
+  color: #00a6d4;
+}
+
+.footer-copyright {
+  width: 100%;
+  background-color: #2a253a;
+}
+.footer-copyright p {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+  padding: 20px 0;
+  color: #aaaaaa;
+}
+.page {
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+  max-width: 1280px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+.page h2 {
+  font-size: 24px;
+  padding: 10px 0;
+}
+.page p {
+  line-height: 25px;
+}
+
+/* About page */
+.buy-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.buy-card img {
+  width: 100px;
+}
+.buy-card h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.buy-card button {
+  border: none;
+  border-radius: 5px;
+  background-color: #1bb96b;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-top: 15px;
+}
+.buy-card button:hover {
+  background-color: #1ead65;
+  cursor: pointer;
+}
+
+.payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.payment img {
+  width: 40px;
+}
+.payment-text p {
+  font-size: 16px;
+  text-align: center;
+}
+.payment-text h3 {
+  text-align: center;
+  font-size: 36px;
+  color: #1bb96b;
+}
+.btn-payment {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.checkout-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.payment-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.payment-btn:disabled {
+  background-color: #cccccc;
+}

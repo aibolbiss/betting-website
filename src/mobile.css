@@ -1,0 +1,134 @@
+@media (max-width: 768px) {
+  .navigation {
+    display: none;
+  }
+  .header-right {
+    display: none;
+  }
+  .navigation-mobile {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  .active .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  .active .bar2 {
+    opacity: 0;
+  }
+  .active .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+  .header-content {
+    display: block;
+  }
+  .logo-navigation {
+    justify-content: space-between;
+  }
+  .nav-mobile {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #2a253a;
+  }
+  .nav-mobile a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+  }
+  .nav-mobile a:active {
+    color: #1bb96b;
+  }
+  .open {
+    display: none;
+  }
+  .logo a {
+    font-size: 20px;
+  }
+  .hero-content {
+    margin: 0;
+    height: 300px;
+  }
+  .hero-title,
+  .hero-subtitle {
+    text-align: center;
+  }
+  .hero-title {
+    font-size: 20px;
+    margin: 100px 0 20px 0;
+  }
+  .hero-subtitle {
+    font-size: 40px;
+  }
+  .hero-section {
+    background-position-x: -200px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .match-cards-container {
+    justify-content: center;
+  }
+  .match-card {
+    width: 100%;
+  }
+  .cards-container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .card {
+    width: 100%;
+  }
+  .full-width-card {
+    border-radius: 0;
+  }
+  .right-yellow-card p {
+    text-align: left;
+  }
+  .table-block h2 {
+    font-size: 30px;
+  }
+  .styled-table {
+    border-radius: 0;
+  }
+  .guarantee {
+    font-size: 30px;
+  }
+  .block-with-cards {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .block-with-card {
+    width: 100%;
+    height: 300px;
+  }
+
+  .footer-block {
+    padding: 0 15px;
+  }
+  .footer-menu {
+    justify-content: center;
+    gap: 6px;
+  }
+  .footer-menu a {
+    font-size: 12px;
+  }
+  .footer-text p {
+    font-size: 12px;
+  }
+  .footer-copyright p {
+    font-size: 10px;
+  }
+}
+@media (min-width: 320px) and (max-width: 600px) {
+  .hero-section {
+    background-position-x: center;
+  }
+}
