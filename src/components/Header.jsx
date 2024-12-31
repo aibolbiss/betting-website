@@ -36,10 +36,10 @@ const Header = () => {
             </div>
           </div>
           {/* Правый блок */}
-          {/* <div className='header-right'>
+          <div className='header-right'>
             <button className='btn login'>Login</button>
             <button className='btn register'>Sign Up</button>
-          </div> */}
+          </div>
         </div>
       </header>
       <nav className={`nav-mobile  ${isActive ? '' : 'open'}`}>
